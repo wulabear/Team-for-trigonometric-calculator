@@ -1,0 +1,27 @@
+function y = taylor_atan(x, terms)
+    % x: 输入的tanx值
+    % terms: 泰勒级数展开的项数
+
+    % 初始化
+    y = 0;
+    sgn = 0;
+    z = 0;
+    
+    if -1 < x && x < 1 
+       for n = 0:terms
+          y = y + ((-1)^n * x^(2*n+1)) / (2*n+1);
+       end
+    else
+       if x < 0
+           sgn = -1;
+       else if x > 0
+           sgn = 1;
+       else
+           sgn = 0;
+       end
+       for n = 1:terms
+          z = z + (-1)^n  / ((2*n+1)* x^(2*n+1));
+       end
+       y = sgn*pi/2 - 1/x - z;
+    end
+    end
