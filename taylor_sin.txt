@@ -1,0 +1,21 @@
+function sin_value = sine(angle, terms)
+    % angle: 输入的角度值（度）
+    % terms: 泰勒级数展开的项数
+
+    % 将角度转换为弧度
+    angle_rad = angle / 180 * pi;
+
+    % 初始化正弦和余弦值
+    sin_value = 0;
+
+    % 计算正弦值
+    for n = 0:terms
+        sin_value = sin_value + ((-1)^n * angle_rad^(2*n+1)) / factorial(2*n+1);
+    end
+
+end
+
+% test示例用法
+angle = 60; % 输入的角度值
+terms = 10; % 泰勒级数展开的项数
+sin_result = sine(angle, terms);
