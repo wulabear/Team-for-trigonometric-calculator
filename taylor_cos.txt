@@ -1,0 +1,20 @@
+function cos_value = cosine(angle, terms)
+    % angle: 输入的角度值（度）
+    % terms: 泰勒级数展开的项数
+
+    % 将角度转换为弧度
+    angle_rad = angle / 180 * pi;
+
+    % 初始化正弦和余弦值
+    cos_value = 0;
+
+    % 计算余弦值
+    for n = 0:terms
+        cos_value = cos_value + ((-1)^n * angle_rad^(2*n)) / factorial(2*n);
+    end
+end
+
+% test示例用法
+angle = 60; % 输入的角度值
+terms = 10; % 泰勒级数展开的项数
+cos_result = sine_cosine(angle, terms);
