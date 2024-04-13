@@ -1,0 +1,16 @@
+
+   function y = taylor_asin(x, terms)
+    % x: 输入的值
+    % terms: 泰勒级数展开的项数
+
+    % 初始化
+    y = 0;
+  
+ 
+    if x < -1 || x > 1  
+        error('Input value must be in the range [-1, 1]');  
+    end 
+
+     for n = 0:terms
+          y = y +factorial(2*n) * x^(2*n+1)/(4^n* factorial(n)^2*(2*n+1));
+    end
