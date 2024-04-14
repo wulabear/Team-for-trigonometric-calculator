@@ -7,14 +7,20 @@
 二.代码功能
   代码功能是实现对四个三角函数sin，cos，arcsin，arctan的计算，使用时会让用户输入要使用的函数类型，接着再输入输入数据，之后会输出结果
 三.三角函数模块计算
-  本工程一共有三个输入数据以及一个输出数据
-    in_type：输入函数类型；
-    in_data：用户输入函数所需的输入数据；
-    in_terms：用户输入函数泰勒展开阶数；
-    result：输出数据；
-    根据用户输入的in_type函数类型判断用户所要使用的函数类型，再计算出相应的函数结果并输出。
-  三角函数
-    正弦函数：taylor_sin(in_data, in_terms);
-    余弦函数：taylor_cos(in_data, in_terms);
-    反正弦函数：taylor_asin(in_data, in_terms);
-    反正切函数：taylor_atan(in_data, in_terms);
+  本工程编写了一个GUI界面，共有4个按键，3个文本窗口
+  按键：sin(x)，cos(x)，arcsin(x)，arctan(x)
+  三个文本窗口：参数x，泰勒展开阶数，结果值
+  使用流程：1.运行GUI；
+                      2.在参数x文本框中输入需要计算的变量；
+                      3.在泰勒展开阶数中输入需要设定的阶数；
+                      4.点击所需要的按键，实现三角函数的计算；
+                      5.最终结果值显示在结果值文本窗口中；
+
+  所调用的三角函数
+    正弦函数：taylor_sin(angle, terms);
+    余弦函数：taylor_cos(angle, terms);
+    反正弦函数：taylor_asin(x, terms);
+    反正切函数：taylor_atan(x, terms);
+    %angle：输入正/余弦函数的角度值；
+    %x：输入反正弦/反正切函数的正弦结果/正切结果；
+    %terms：输入函数泰勒展开阶数；
