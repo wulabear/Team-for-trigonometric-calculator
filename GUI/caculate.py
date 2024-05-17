@@ -29,6 +29,6 @@ def sine(x,term):
 def cosine(x,term):
     return cos.taylor_cos(x,term)
 def arcsine(x,term):
-    return asin.taylor_sin(x,term)
+    return asin.taylor_asin(x,term)
 def arctan(x,term):
-    return sin.taylor_atan(x,term)
+    return atan.taylor_atan(x,term)
